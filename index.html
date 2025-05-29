@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias - Sua fonte confiável de informações</title>
+    <meta name="description" content="Portal de notícias com as últimas informações sobre esportes, política, economia e muito mais.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Portal News</h1>
+                    <span class="tagline">Sua fonte confiável</span>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#" data-category="hot" class="nav-link active">Quentes</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">Futebol <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-category="brasil">Brasil</a></li>
+                                <li><a href="#" data-category="premier-league">Premier League</a></li>
+                                <li><a href="#" data-category="la-liga">La Liga</a></li>
+                                <li><a href="#" data-category="serie-a">Serie A</a></li>
+                                <li><a href="#" data-category="bundesliga">Bundesliga</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" data-category="politica" class="nav-link">Política</a></li>
+                        <li><a href="#" data-category="economia" class="nav-link">Economia</a></li>
+                        <li><a href="#" data-category="tecnologia" class="nav-link">Tecnologia</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Search -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar notícias..." class="search-input">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breaking News Banner -->
+    <div class="breaking-news" id="breakingNews">
+        <div class="container">
+            <span class="breaking-label">URGENTE</span>
+            <div class="breaking-content">
+                <p id="breakingText">Carregando últimas notícias...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Sidebar - Ad Space -->
+                <aside class="sidebar-left">
+                    <div class="ad-space vertical-ad">
+                        <p>Espaço Publicitário</p>
+                        <span>300x600</span>
+                    </div>
+                </aside>
+
+                <!-- Main Content Area -->
+                <section class="content-main">
+                    <!-- Category Title -->
+                    <div class="category-header">
+                        <h2 id="categoryTitle">Notícias Quentes</h2>
+                        <div class="category-meta">
+                            <span id="newsCount">0 notícias</span>
+                            <button class="refresh-btn" id="refreshBtn">🔄 Atualizar</button>
+                        </div>
+                    </div>
+
+                    <!-- Featured News -->
+                    <div class="featured-section" id="featuredSection">
+                        <div class="featured-news" id="featuredNews">
+                            <!-- Featured news will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Ad Banner -->
+                    <div class="ad-space horizontal-ad">
+                        <p>Espaço Publicitário</p>
+                        <span>728x90</span>
+                    </div>
+
+                    <!-- News Grid -->
+                    <div class="news-grid" id="newsGrid">
+                        <!-- News cards will be loaded here -->
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="load-more-container">
+                        <button class="load-more-btn" id="loadMoreBtn">Carregar Mais Notícias</button>
+                    </div>
+                </section>
+
+                <!-- Right Sidebar -->
+                <aside class="sidebar-right">
+                    <!-- Trending Topics -->
+                    <div class="widget">
+                        <h3>Trending Topics</h3>
+                        <ul class="trending-list" id="trendingList">
+                            <!-- Trending topics will be loaded here -->
+                        </ul>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="ad-space square-ad">
+                        <p>Espaço Publicitário</p>
+                        <span>300x250</span>
+                    </div>
+
+                    <!-- Weather Widget -->
+                    <div class="widget weather-widget">
+                        <h3>Clima</h3>
+                        <div class="weather-info">
+                            <div class="weather-location">São Paulo</div>
+                            <div class="weather-temp">25°C</div>
+                            <div class="weather-desc">Parcialmente nublado</div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="widget newsletter-widget">
+                        <h3>Newsletter</h3>
+                        <p>Receba as principais notícias no seu email</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Seu email" required>
+                            <button type="submit">Inscrever</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Portal News</h4>
+                    <p>Sua fonte confiável de informações atualizadas 24 horas por dia.</p>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Notícias Quentes</a></li>
+                        <li><a href="#">Futebol</a></li>
+                        <li><a href="#">Política</a></li>
+                        <li><a href="#">Economia</a></li>
+                        <li><a href="#">Tecnologia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sobre</h4>
+                    <ul>
+                        <li><a href="#">Quem Somos</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Email: contato@portalnews.com</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                    <p>Endereço: São Paulo, SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Portal News. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Carregando notícias...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
