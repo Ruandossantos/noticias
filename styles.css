@@ -978,3 +978,24 @@ body {
 .slide-in {
   animation: slideIn 0.3s ease-out;
 }
+
+/* Adapta o tamanho dos anúncios em dispositivos móveis */
+@media (max-width: 768px) {
+    .ad-space {
+        width: 100%;
+        height: auto;
+    }
+
+    .ad-space img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Para desktop */
+@media (min-width: 769px) {
+    .ad-space {
+        width: 728px; /* Exemplo para banner horizontal */
+        height: 90px; /* Exemplo para banner horizontal */
+    }
+}
