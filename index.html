@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Notícias - Sua fonte confiável de informações</title>
-    <meta name="description" content="Portal de notícias com as últimas informações sobre esportes, política, economia e muito mais.">
+    <meta name="description"
+        content="Portal de notícias com as últimas informações sobre esportes, política, economia e muito mais.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-       <!-- Meta Tag para Monetag -->
+    <!-- Meta Tag para Monetag -->
     <meta name="monetag" content="dfba8ee91bd7fe397dc0ff8a0ee07791">
-
+    <script src='//libtl.com/sdk.js' data-zone='9392835' data-sdk='show_9392835'></script>
+    <script src="https://cdn.monetag.com/sdk.js" data-zone=9527556 data-sdk=9392835>
+    </script>
+    </script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -22,7 +28,7 @@
                     <h1>Portal News</h1>
                     <span class="tagline">Sua fonte confiável</span>
                 </div>
-                
+
                 <!-- Navigation -->
                 <nav class="nav" id="nav">
                     <ul class="nav-list">
@@ -75,6 +81,14 @@
             <div class="content-grid">
                 <!-- Left Sidebar - Ad Space -->
                 <aside class="sidebar-left">
+                    <div class="ad-space vertical-ad">
+                        <p>Espaço Publicitário</p>
+                        <span>300x600</span>
+                    </div>
+                    <div class="ad-space horizontal-ad">
+                        <p>Espaço Publicitário</p>
+                        <span>728x90</span>
+                    </div>
                     <div class="ad-space vertical-ad">
                         <p>Espaço Publicitário</p>
                         <span>300x600</span>
@@ -210,5 +224,16 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
+
+    <script>
+  window.onload = function() {
+    show_YOUR_ZONE_ID().then(() => {
+      console.log('Anúncio exibido com sucesso!');
+    }).catch((error) => {
+      console.error('Erro ao exibir o anúncio:', error);
+    });
+  };
+</script>
 </body>
+
 </html>
