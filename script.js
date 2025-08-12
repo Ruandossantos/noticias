@@ -934,31 +934,3 @@ if (typeof module !== "undefined" && module.exports) {
     CONFIG,
   }
 }
-function carregarAnuncios() {
-    // Selecionar os containers onde os anúncios serão carregados
-    const adContainers = [
-        document.getElementById('horizontalAd'),
-        document.getElementById('leftSidebarAd'),
-        document.getElementById('rightSidebarAd')
-    ];
-
-    // Para cada espaço publicitário, carregar um anúncio
-    adContainers.forEach(container => {
-        // Exibir o anúncio usando o SDK da Monetag
-        window['show_9527556']() // Usando a função global criada pelo script Monetag
-            .then(() => {
-                console.log('Anúncio exibido com sucesso!');
-            })
-            .catch((error) => {
-                console.error('Erro ao exibir o anúncio:', error);
-            });
-    });
-}
-
-// Carregar os anúncios assim que a página for carregada
-window.onload = function() {
-    carregarAnuncios();
-};
-
-// Atualizar anúncios a cada 30 segundos (30000 milissegundos)
-setInterval(carregarAnuncios, 30000);
